@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 import rospy
 import cv2
 import message_filters
@@ -19,6 +21,7 @@ def cb_image(image):
     #sprint("publish synchronized message")
 
 def cb_info(msg):
+    global info
     info = msg
 
 

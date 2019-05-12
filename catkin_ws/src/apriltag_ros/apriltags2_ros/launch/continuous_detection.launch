@@ -18,6 +18,13 @@
     <param name="publish_tag_detections_image" type="bool" value="true" />      <!-- default: false -->
   </node>
 
-  <!--node args="0 0 0 0 0 0 /base_link /camera 10" pkg="tf" name="base_link_to_camera" type="static_transform_publisher"/-->
+  <node pkg="apriltags2_ros" type="synchronize.py" name="synchronizer" output="screen" />
+
+  <node args="0.9 0 0 0 0 0 /map /tag0 10" pkg="tf" name="map_to_tag0" type="static_transform_publisher"/>
+  <node args="0.48 0 0 0 0 0 /map /tag2 10" pkg="tf" name="map_to_tag2" type="static_transform_publisher"/>
+  <node args="0 0 0 0 0 0 /map /tag1 10" pkg="tf" name="map_to_tag1" type="static_transform_publisher"/>
+
+  <node pkg="apriltags2_ros" type="broadcaster.py" name="broadcaster" output="screen" />
+
 
 </launch>
