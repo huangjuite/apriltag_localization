@@ -22,9 +22,12 @@ class Broadcaster():
         mtf.child_frame_id = "camera"
         mtf.header.stamp = tag.pose.header.stamp
         mtf.header.frame_id = parent
-        mtf.transform.translation = tag.pose.pose.pose.position
-        mtf.transform.rotation = tag.pose.pose.pose.orientation
-
+        #mtf.transform.translation = tag.pose.pose.pose.position
+        #mtf.transform.rotation = tag.pose.pose.pose.orientation
+        mtf.transform.translation.x = tag.pose.pose.pose.position.y * -1
+        mtf.transform.translation.y = tag.pose.pose.pose.position.x * -1
+        mtf.transform.translation.z = tag.pose.pose.pose.position.z 
+        
         return mtf
 
 
