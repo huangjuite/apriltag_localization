@@ -1,8 +1,0 @@
-prefix=/home/ray/apriltag_localization/catkin_ws/install
-
-Name: zed_rtabmap_example
-Description: Description of zed_rtabmap_example
-Version: 2.7.0
-Cflags: 
-Libs: -L/home/ray/apriltag_localization/catkin_ws/install/lib 
-Requires: 

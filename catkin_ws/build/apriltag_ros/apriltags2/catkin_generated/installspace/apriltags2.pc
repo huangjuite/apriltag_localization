@@ -1,8 +1,0 @@
-prefix=/home/ray/apriltag_localization/catkin_ws/install
-
-Name: apriltags2
-Description: Description of apriltags2
-Version: 0.9.8
-Cflags: -I/home/ray/apriltag_localization/catkin_ws/install/include
-Libs: -L/home/ray/apriltag_localization/catkin_ws/install/lib -lapriltags2
-Requires: 
