@@ -1,6 +1,9 @@
 .vscode/
+<<<<<<< HEAD
 catkin_ws/devel/
 catkin_ws/build/
 catkin_ws/install/
 *.bag
+=======
+>>>>>>> aa67956db97a2c12300a56ffb8f18f37e9799c6a
 

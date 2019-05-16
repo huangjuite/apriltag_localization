@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ray/apriltag_localization/catkin_ws/install/setup.sh
