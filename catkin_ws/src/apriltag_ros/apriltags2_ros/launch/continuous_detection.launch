@@ -2,9 +2,9 @@
   <arg name="launch_prefix" default="" />
   <!-- set to value="gdbserver localhost:10000" for remote debugging -->
   <arg name="node_namespace" default="apriltags2_ros_continuous_node" />
-  <arg name="camera_name" default="/camera_rect" />
+  <arg name="camera_name" default="/camera/color" />
   <arg name="camera_frame" default="camera" />
-  <arg name="image_topic" default="image_rect" />
+  <arg name="image_topic" default="image_rect_color" />
   
   <!-- Set parameters -->
   <rosparam command="load" file="$(find apriltags2_ros)/config/settings.yaml" ns="$(arg node_namespace)" />
@@ -22,27 +22,27 @@
 
   <node pkg="apriltags2_ros" type="synchronize.py" name="synchronizer" output="screen" />
 
-  <node args="0 0 1     1 0 0 1 /map /ftag1 10" pkg="tf" name="map_to_ftag1" type="static_transform_publisher"/>
-  <node args="1.2 0 1  1 0 0 1 /map /ftag2 10" pkg="tf" name="map_to_ftag2" type="static_transform_publisher"/>
-  <node args="2.4 0 1     1 0 0 1 /map /ftag3 10" pkg="tf" name="map_to_ftag3" type="static_transform_publisher"/>
-  <node args="3.6 0 1     1 0 0 1 /map /ftag4 10" pkg="tf" name="map_to_ftag4" type="static_transform_publisher"/>
-  <node args="4.8 0 1     1 0 0 1 /map /ftag5 10" pkg="tf" name="map_to_ftag5" type="static_transform_publisher"/>
-  <node args="6.0 0 1     1 0 0 1 /map /ftag6 10" pkg="tf" name="map_to_ftag6" type="static_transform_publisher"/>
-  <node args="7.2 0 1     1 0 0 1 /map /ftag7 10" pkg="tf" name="map_to_ftag7" type="static_transform_publisher"/>
-  <node args="8.4 0 1     1 0 0 1 /map /ftag8 10" pkg="tf" name="map_to_ftag8" type="static_transform_publisher"/>
-  <node args="9.6 0 1     1 0 0 1 /map /ftag9 10" pkg="tf" name="map_to_ftag9" type="static_transform_publisher"/>
-  <node args="10.8 0 1     1 0 0 1 /map /ftag10 10" pkg="tf" name="map_to_ftag10" type="static_transform_publisher"/>
+  <node args="0 0 1     1 0 0 1 /map /ftag11 10" pkg="tf" name="map_to_ftag11" type="static_transform_publisher"/>
+  <node args="1.2 0 1     1 0 0 1 /map /ftag12 10" pkg="tf" name="map_to_ftag12" type="static_transform_publisher"/>
+  <node args="2.4 0 1     1 0 0 1 /map /ftag13 10" pkg="tf" name="map_to_ftag13" type="static_transform_publisher"/>
+  <node args="3.6 0 1     1 0 0 1 /map /ftag14 10" pkg="tf" name="map_to_ftag14" type="static_transform_publisher"/>
+  <node args="4.8 0 1     1 0 0 1 /map /ftag15 10" pkg="tf" name="map_to_ftag15" type="static_transform_publisher"/>
+  <node args="6.0 0 1     1 0 0 1 /map /ftag16 10" pkg="tf" name="map_to_ftag16" type="static_transform_publisher"/>
+  <node args="7.2 0 1     1 0 0 1 /map /ftag17 10" pkg="tf" name="map_to_ftag17" type="static_transform_publisher"/>
+  <node args="8.4 0 1     1 0 0 1 /map /ftag18 10" pkg="tf" name="map_to_ftag18" type="static_transform_publisher"/>
+  <node args="9.6 0 1     1 0 0 1 /map /ftag19 10" pkg="tf" name="map_to_ftag19" type="static_transform_publisher"/>
+  <node args="10.8 0 1     1 0 0 1 /map /ftag20 10" pkg="tf" name="map_to_ftag20" type="static_transform_publisher"/>
   
-  <node args="0 0 -2.55     1 0 0 1 /map /ftag11 10" pkg="tf" name="map_to_ftag11" type="static_transform_publisher"/>
-  <node args="1.2 0 -2.55  1 0 0 1 /map /ftag12 10" pkg="tf" name="map_to_ftag12" type="static_transform_publisher"/>
-  <node args="2.4 0 -2.55     1 0 0 1 /map /ftag13 10" pkg="tf" name="map_to_ftag13" type="static_transform_publisher"/>
-  <node args="3.6 0 -2.55     1 0 0 1 /map /ftag14 10" pkg="tf" name="map_to_ftag14" type="static_transform_publisher"/>
-  <node args="4.8 0 -2.55     1 0 0 1 /map /ftag15 10" pkg="tf" name="map_to_ftag15" type="static_transform_publisher"/>
-  <node args="6.0 0 -2.55     1 0 0 1 /map /ftag16 10" pkg="tf" name="map_to_ftag16" type="static_transform_publisher"/>
-  <node args="7.2 0 -2.55     1 0 0 1 /map /ftag17 10" pkg="tf" name="map_to_ftag17" type="static_transform_publisher"/>
-  <node args="8.4 0 -2.55     1 0 0 1 /map /ftag18 10" pkg="tf" name="map_to_ftag18" type="static_transform_publisher"/>
-  <node args="9.6 0 -2.55     1 0 0 1 /map /ftag19 10" pkg="tf" name="map_to_ftag19" type="static_transform_publisher"/>
-  <node args="10.8 0 -2.55     1 0 0 1 /map /ftag20 10" pkg="tf" name="map_to_ftag20" type="static_transform_publisher"/>
+  <node args="0 -2.55 1     0 3.14 -1.57 /map /ftag1 10" pkg="tf" name="map_to_ftag1" type="static_transform_publisher"/>
+  <node args="1.2 -2.55 1     0 3.14 -1.57 /map /ftag2 10" pkg="tf" name="map_to_ftag2" type="static_transform_publisher"/>
+  <node args="2.4 -2.55 1     0 3.14 -1.57 /map /ftag3 10" pkg="tf" name="map_to_ftag3" type="static_transform_publisher"/>
+  <node args="3.6 -2.55 1     0 3.14 -1.57 /map /ftag4 10" pkg="tf" name="map_to_ftag4" type="static_transform_publisher"/>
+  <node args="4.8 -2.55 1     0 3.14 -1.57 /map /ftag5 10" pkg="tf" name="map_to_ftag5" type="static_transform_publisher"/>
+  <node args="6.0 -2.55 1     0 3.14 -1.57 /map /ftag6 10" pkg="tf" name="map_to_ftag6" type="static_transform_publisher"/>
+  <node args="7.2 -2.55 1     0 3.14 -1.57 /map /ftag7 10" pkg="tf" name="map_to_ftag7" type="static_transform_publisher"/>
+  <node args="8.4 -2.55 1     0 3.14 -1.57 /map /ftag8 10" pkg="tf" name="map_to_ftag8" type="static_transform_publisher"/>
+  <node args="9.6 -2.55 1     0 3.14 -1.57 /map /ftag9 10" pkg="tf" name="map_to_ftag9" type="static_transform_publisher"/>
+  <node args="10.8 -2.55 1     0 3.14 -1.57 /map /ftag10 10" pkg="tf" name="map_to_ftag10" type="static_transform_publisher"/>
 
   <node pkg="apriltags2_ros" type="listener.py" name="tfListener" output="screen" />
 
